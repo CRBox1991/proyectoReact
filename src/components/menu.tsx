@@ -22,6 +22,7 @@ function Menu(props: MenuProps) {
             {user && <NavLink className={estilosLinks} to="/bookPage">MyBooks</NavLink>}
             {user && <NavLink className={estilosLinks} to="/update">UpdateBook</NavLink>}
             {user && <NavLink className={estilosLinks} to="/edit">EditBook</NavLink>}
+            {user && <NavLink className={estilosLinks} to="/add">AddBook</NavLink>}
             {user && <NavLink className={estilosLinks} to="/profile">Profile</NavLink>}
         </nav>
     )

@@ -11,6 +11,8 @@ import UpdateBook from './pages/updateBook'
 import EditBook from './pages/editBook'
 import Profile from './pages/profile'
 import PrivateRoutes from './components/privateRoutes'
+import AddBook from './pages/addBook'
+import PublicRoutes from './components/publicRoutes'
 
 
 function App() {
@@ -20,13 +22,17 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/login' element={<Login />} />
+        <Route element={<PublicRoutes />}>
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+        </Route>
+
         <Route element={<PrivateRoutes />}>
           <Route path='/bookPage' element={<BookPage />} />
           <Route path='/update' element={<UpdateBook />} />
           <Route path='/edit' element={<EditBook />} />
           <Route path='/profile' element={<Profile />} />
+          <Route path='/add' element={<AddBook />} />
         </Route>
       </Routes>
       <Footer />

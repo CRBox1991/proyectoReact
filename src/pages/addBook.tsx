@@ -1,10 +1,9 @@
 
 
 
+function AddBook() {
 
-function UpdateBook(){
-
-    const update = 'w-full min-h-[86vh] flex flex-col justify-center items-center flex-wrap gap-4'
+    const edit = 'w-full min-h-[86vh] flex flex-col justify-center items-center flex-wrap gap-4'
     const editDiv = 'flex flex-col justify-around items-center'
     const form = 'flex flex-col justify-around items-center w-[400px] h-96 border-2 border-emerald-400 rounded-lg p-4'
     const input = 'border-emerald-400 border-2 w-5/6 rounded-lg h-9 pl-4 font-mono'
@@ -14,9 +13,9 @@ function UpdateBook(){
     const label = 'font-mono w-[70px]'
     const grupos = 'flex w-full h-10 items-center justify-around'
 
-    return(
-        <div className={update}>
-            <h1 className={h1}>Update your book</h1>
+    return (
+        <div className={edit}>
+            <h1 className={h1}>Add a new book</h1>
             <div className={editDiv}>
                 <form className={form} action="">
                     <div className='flex flex-col items-center justify-around w-full h-full'>
@@ -44,12 +43,12 @@ function UpdateBook(){
                     </div>
 
                     <div className={button}>
-                        <button className={button2}>Update Book</button>
+                        <button className={button2}>Add Book</button>
                     </div>
                 </form>
-            </div>
+            </div >
         </div>
     )
 }
 
-export default UpdateBook
+export default AddBook
