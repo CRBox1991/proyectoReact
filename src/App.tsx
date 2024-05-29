@@ -8,7 +8,6 @@ import HomePage from './pages/home'
 import Register from './pages/register'
 import Login from './pages/login'
 import UpdateBook from './pages/updateBook'
-import EditBook from './pages/editBook'
 import Profile from './pages/profile'
 import PrivateRoutes from './components/privateRoutes'
 import AddBook from './pages/addBook'
@@ -29,8 +28,7 @@ function App() {
 
         <Route element={<PrivateRoutes />}>
           <Route path='/bookPage' element={<BookPage />} />
-          <Route path='/update' element={<UpdateBook />} />
-          <Route path='/edit' element={<EditBook />} />
+          <Route path='/update' element={<UpdateBook />} />          
           <Route path='/profile' element={<Profile />} />
           <Route path='/add' element={<AddBook />} />
         </Route>

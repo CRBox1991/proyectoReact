@@ -5,10 +5,10 @@ type MenuProps ={
 }
 
 function Menu(props: MenuProps) {
-    //let user = null;
-  let user = {
-    name:'Cristian'
-  }
+  let user = null;
+  // let user = {
+  //   name:'Cristian'
+  // }
 
     const {menuVisible} = props;
     const estilosNavBar =`flex items-center justify-end text-xl font-mono ${menuVisible ? 'flex-col': ''}`
@@ -20,8 +20,7 @@ function Menu(props: MenuProps) {
             {!user && <NavLink className={estilosLinks} to="/login">LogIn</NavLink>}
             {!user && <NavLink className={estilosLinks} to="/register">Register</NavLink>}
             {user && <NavLink className={estilosLinks} to="/bookPage">MyBooks</NavLink>}
-            {user && <NavLink className={estilosLinks} to="/update">UpdateBook</NavLink>}
-            {user && <NavLink className={estilosLinks} to="/edit">EditBook</NavLink>}
+            {user && <NavLink className={estilosLinks} to="/update">UpdateBook</NavLink>}            
             {user && <NavLink className={estilosLinks} to="/add">AddBook</NavLink>}
             {user && <NavLink className={estilosLinks} to="/profile">Profile</NavLink>}
         </nav>

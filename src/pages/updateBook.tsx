@@ -1,8 +1,22 @@
+import { useState } from "react"
 
 
 
 
-function UpdateBook(){
+function UpdateBook() {
+
+    const [formUpdate, setFormUpdate] = useState({
+        title: 'Caperucita Roja',
+        author: 'Charles Dickson',
+        photo: 'https://t3.ftcdn.net/jpg/02/98/94/38/360_F_298943877_A4W7tVyZPCu6gNGuGXJUerZbXsWmblLb.jpg',
+        price: 0,
+        book_id: 0
+    })
+
+    function HandleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
+        const { name, value } = event.target
+        setFormUpdate({ ...formUpdate, [name]: value })
+    }
 
     const update = 'w-full min-h-[86vh] flex flex-col justify-center items-center flex-wrap gap-4'
     const editDiv = 'flex flex-col justify-around items-center'
@@ -14,7 +28,7 @@ function UpdateBook(){
     const label = 'font-mono w-[70px]'
     const grupos = 'flex w-full h-10 items-center justify-around'
 
-    return(
+    return (
         <div className={update}>
             <h1 className={h1}>Update your book</h1>
             <div className={editDiv}>
@@ -23,23 +37,23 @@ function UpdateBook(){
 
                         <div className={grupos}>
                             <label className={label} htmlFor="">Title:</label>
-                            <input className={input} type="text" placeholder="Title" />
+                            <input name='title' value={formUpdate.title} onChange={HandleInputChange} className={input} type="text" placeholder="Title" />
                         </div>
                         <div className={grupos}>
                             <label className={label} htmlFor="">Author:</label>
-                            <input className={input} type="text" placeholder='Author' />
+                            <input name='author' value={formUpdate.author} onChange={HandleInputChange} className={input} type="text" placeholder='Author' />
                         </div>
                         <div className={grupos}>
                             <label className={label} htmlFor="">Photo:</label>
-                            <input className={input} type="text" placeholder='Photo' />
+                            <input name='photo' value={formUpdate.photo} onChange={HandleInputChange} className={input} type="text" placeholder='Photo' />
                         </div>
                         <div className={grupos}>
                             <label className={label} htmlFor="">Price:</label>
-                            <input className={input} type="text" placeholder='Price' />
+                            <input name='price' value={formUpdate.price} onChange={HandleInputChange} className={input} type="text" placeholder='Price' />
                         </div>
                         <div className={grupos}>
                             <label className={label} htmlFor="">Id:</label>
-                            <input className={input} type="text" placeholder='Book Id' />
+                            <input name='book_id' value={formUpdate.book_id} onChange={HandleInputChange} className={input} type="text" placeholder='Book Id' />
                         </div>
                     </div>
 
