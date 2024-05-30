@@ -23,7 +23,7 @@ function AddBook() {
     const input = 'border-emerald-400 border-2 w-5/6 rounded-lg h-9 pl-4 font-mono'
     const h1 = 'font-mono text-2xl mb-4'
     const button = 'w-full rounded-lg h-10 mb-3'
-    const button2 = 'border-emerald-400 border-2 w-full rounded-lg h-10 pl-4 font-mono'
+    const button2 = 'border-emerald-400 border-2 w-[95%] ml-2 rounded-lg h-10 pl-4 font-mono bg-emerald-200 hover:bg-emerald-400' 
     const label = 'font-mono w-[70px]'
     const grupos = 'flex w-full h-10 items-center justify-around'
 
@@ -61,6 +61,9 @@ function AddBook() {
                     </div>
                 </form>
             </div >
+            {/* <pre style={{ fontSize: '1rem' }}>
+                {JSON.stringify(formAddBook, null, 3)}
+            </pre> */}
         </div>
     )
 }

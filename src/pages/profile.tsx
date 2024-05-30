@@ -23,7 +23,7 @@ function Profile() {
     const ps = 'font-mono text-2xl mb-4 text-center'
     const input = 'border-emerald-400 border-2 w-[300px] rounded-lg h-10 pl-4 font-mono'
     const button = 'w-[92%] rounded-lg h-10 mb-5'
-    const button2 = 'border-emerald-400 border-2 w-full rounded-lg h-10 pl-4 font-mono'
+    const button2 = 'border-emerald-400 border-2 w-[95%] ml-2 rounded-lg h-10 pl-4 font-mono bg-emerald-200 hover:bg-emerald-400 ' 
     const label = 'font-mono w-[70px]'
     const grupos = 'flex w-full h-10 items-center justify-around'
 
@@ -61,6 +61,9 @@ function Profile() {
                     <button type="button" className={button2}>Edit</button>
                 </div>
             </div >
+            {/* <pre style={{ fontSize: '1rem' }}>
+                {JSON.stringify(formProfile, null, 3)}
+            </pre> */}
         </div >
     )
 }
